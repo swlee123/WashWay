@@ -7,7 +7,10 @@ const COLORS = {
 }
 
 const SIZES ={
-    small : 12,
+    xs : 14,
+    small : 17,
+    normal : 20,
+    large : 28
 }
 
 const FONT = {
