@@ -1,6 +1,8 @@
 import {StyleSheet ,Platform} from 'react-native';
 
 import { COLORS ,SIZES ,FONTS} from '../constants/theme';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+// when got time change all hardcoded pixel value to responsive screen value using wp hp 
 
 const styles = StyleSheet.create({
     // we can define frequently used style for general components here

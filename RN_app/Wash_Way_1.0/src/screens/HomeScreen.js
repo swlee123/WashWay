@@ -1,6 +1,5 @@
 import styles from '../styles/search';
 import { SafeAreaView , Text, View ,TouchableOpacity ,Image} from 'react-native';
-import React from 'react'
 import { COLORS ,SIZES ,FONTS } from '../constants/theme';
 import icons from '../constants/icons';
 import images from '../constants/images';
