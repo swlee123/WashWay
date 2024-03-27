@@ -14,7 +14,8 @@ const SIZES ={
 }
 
 const FONT = {
-
+    font1 : '../assets/fonts/PatuaOne-Regular.ttf',
+    // not sure whether it is font safe for ios , will decide later (after MVP stage)
 }
 
 export {COLORS, SIZES, FONT}

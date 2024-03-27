@@ -1,4 +1,5 @@
 import { SafeAreaView, TextInput,TouchableOpacity, Text, View,Image} from 'react-native'
+import { Shadow } from 'react-native-shadow-2';
 import styles from '../styles/MainMenuStyle';
 import { COLORS ,SIZES ,FONTS } from '../constants/theme';
 import icons from '../constants/icons';
@@ -15,6 +16,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 const Drawer = createDrawerNavigator();
 
 const MainMenu = ({navigation}) => {
+
   return (
   
     <SafeAreaView style = {styles.SafeArea}>
@@ -85,9 +87,21 @@ const MainMenu = ({navigation}) => {
         </View>
 
         {/* container for available sevices */}
-        <View>
-                
-        </View>
+        <Shadow distance={13}>
+            <View style = {styles.servicesContainer}>
+                <View>
+                    <TouchableOpacity style = {styles.serviceButton}>
+                        <Image style = {styles.washIcon}source={images.washIcon}/>
+
+                        <Text style = {styles.serviceText}>
+                            Book A Wash
+                        </Text>
+                    </TouchableOpacity>
+                    
+                </View>
+    
+            </View>
+        </Shadow>
 
 
     </SafeAreaView>
