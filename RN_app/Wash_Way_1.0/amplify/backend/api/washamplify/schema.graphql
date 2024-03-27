@@ -1,0 +1,62 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type WasherBankAccount {
+  Washer_id: ID
+  account_number: Int
+  bank: String
+}
+
+type UserCard {
+  cardType: String
+  cardNo: Int
+  cardExpiredDate: AWSDate
+  cardCVV: Int
+}
+
+type WashTeam @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  washer_id: ID
+  accumulated_order: Int
+  accumulated_sales: Float
+  completed_order_id: ID
+}
+
+type Payment @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  order_id: String
+  payment_method: String
+  amount: String
+  status: String
+}
+
+type Washer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  phone: AWSPhone
+  email: AWSEmail
+  password: String
+  payrollAccount: WasherBankAccount
+}
+
+type WashOrder @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  user_id: ID
+  wash_team_id: ID
+  status: String
+  location: String
+  order_placed_time: AWSDateTime
+  order_start_time: AWSTimestamp
+  order_end_time: AWSTimestamp
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  email: AWSEmail
+  password: String
+  phone_number: AWSPhone
+  balance: Float
+  card: UserCard
+}

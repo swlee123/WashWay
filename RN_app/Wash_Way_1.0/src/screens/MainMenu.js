@@ -1,4 +1,4 @@
-import { SafeAreaView, TextInput,TouchableOpacity, Text, View } from 'react-native'
+import { SafeAreaView, TextInput,TouchableOpacity, Text, View,Image} from 'react-native'
 import styles from '../styles/MainMenuStyle';
 import { COLORS ,SIZES ,FONTS } from '../constants/theme';
 import icons from '../constants/icons';
@@ -21,8 +21,8 @@ const MainMenu = ({navigation}) => {
         
 
         {/* main title */}
-        <View>
-            <Text>
+        <View >
+            <Text style = {styles.MainTitle}>
                 WashWay
             </Text>
         </View>
@@ -64,16 +64,22 @@ const MainMenu = ({navigation}) => {
         </View>
 
         {/* container for map + profile */}
-        <View>
+        <View style = {styles.m_pContainer}>
 
              {/*map  */}
-            <View>
-                
+            <View style = {styles.mapContainer}>
+                <TouchableOpacity>
+                    <Text>Map</Text>
+                </TouchableOpacity>
             </View>
             
             {/* profile */}
-            <View>
-                
+            <View style = {styles.profileContainer}>
+                <TouchableOpacity style = {styles.profileButton}>
+                    <Image style = {styles.userIcon} source= {images.defaultUserIcon}/>
+                    <Text style = {styles.profileText1}>UserName</Text>
+                    <Text  style = {styles.profileText2}>Profile</Text>
+                </TouchableOpacity>
             </View>
 
         </View>

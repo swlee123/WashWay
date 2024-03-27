@@ -8,6 +8,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+// aws stuff 
+import {Amplify , Auth} from 'aws-amplify';
+import amplifyconfig from './src/amplifyconfiguration.json';
+Amplify.configure(amplifyconfig);
+
+//
 import LoginPage from './src/screens/LoginPage';
 import SignupPage from './src/screens/SignupPage';
 import HomeScreen from './src/screens/HomeScreen';

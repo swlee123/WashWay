@@ -12,6 +12,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
+    // look for better font please
+    MainTitle : {
+        fontSize: SIZES.large-3,
+        marginBottom : hp("3%"),
+        marginTop : hp("-10%"),
+    },
     firstContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -28,6 +34,62 @@ const styles = StyleSheet.create({
         marginHorizontal : 5,
         padding:10,
         width: wp("40%"),
+    },
+
+    // map + profile container 
+    m_pContainer : {
+ 
+        flexDirection: 'row',
+        paddingHorizontal : wp("3%"),
+        paddingBottom : hp("3%"),
+        justifyContent : 'center',
+        alignItems : 'center',
+    },
+
+    // map container 
+    mapContainer : {
+        borderRadius : 20,
+        flex : 1,
+        backgroundColor : "#F3F3F3",
+        width : wp("30%"),
+        height : hp("23%"),
+        margin : wp("3%"),
+        
+        alignItems : 'center',
+    },
+    // profile container 
+    profileContainer : {
+        borderRadius : 20,
+        flex : 1,
+        backgroundColor : "#F3F3F3",
+        width : wp("30%"),
+        height : hp("23%"),
+        margin : wp("3%"),
+      
+    },
+
+    // profile button 
+    profileButton : {
+        justifyContent : 'center',
+        alignItems : 'center',
+        width : '100%',
+        height : '60%',
+        marginTop : hp("5%"),
+    },
+
+    userIcon : {
+        resizeMode: 'contain',
+        width : '70%',
+        height : '100%',
+    },
+
+    profileText1 : {
+        fontSize : SIZES.normal,
+        
+    },
+    profileText2 : {
+        fontSize : SIZES.small,
+        fontWeight : 'bold',
     },
 
     redButton : {
@@ -75,12 +137,12 @@ const styles = StyleSheet.create({
     },
     
     TextInputContainer : {
-        margin: 20,
-        paddingTop : 20,
-        paddingLeft:10,
-        paddingRight:10,
+       
+        paddingHorizontal : hp("20%"),
+        paddingBottom : hp("2%"),
     },
 
+    // available service container 
 
 
     
