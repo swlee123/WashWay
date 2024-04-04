@@ -14,6 +14,7 @@ import amplifyconfig from './src/amplifyconfiguration.json';
 Amplify.configure(amplifyconfig);
 
 //
+import SearchResult from './src/screens/SearchResults';
 import LoginPage from './src/screens/LoginPage';
 import SignupPage from './src/screens/SignupPage';
 import HomeScreen from './src/screens/HomeScreen';
@@ -28,7 +29,7 @@ import FAQ from './src/screens/sidebar/FAQ';
 const Drawer = createDrawerNavigator();
 
 // need to write functions to get authdata ,  either from local or from server
-const authData = true;
+const authData = false;
 const Stack = createNativeStackNavigator();
 
 const FirstScreen = ({authData}) =>{
@@ -70,13 +71,15 @@ const FirstScreen = ({authData}) =>{
 
           </Drawer.Navigator>
          
-        ) : (
+        ) 
+        : (
           // If not authenticated, show the login, signup, and home screens
           <Stack.Navigator>
+            <Stack.Screen name="SearchResult" component={SearchResult} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Login" component={LoginPage} />
             <Stack.Screen name="SignUp" component={SignupPage} />
-          
+            
           </Stack.Navigator>
 
         )}
